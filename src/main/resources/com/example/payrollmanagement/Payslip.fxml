@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="15" alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.payrollmanagement.PayslipController"
+      style="-fx-padding: 25; -fx-background-color: #f4f4f4;">
+
+    <Text text="Employee Payslip"
+          style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-fill: #333;" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Select Employee:"/>
+        <ComboBox fx:id="employeeComboBox" prefWidth="220" promptText="Choose Employee"/>
+    </HBox>
+
+    <GridPane hgap="12" vgap="12">
+        <Label text="Employee ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="empIdLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="nameLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Department:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="departmentLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Position:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="positionLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Basic Salary:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="basicSalaryLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label text="Working Hours:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="workingHoursLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Overtime:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="overtimeField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+        <Label text="Deductions:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="deductionsField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <!-- Added missing labels -->
+        <Label text="Overtime Pay:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <Label fx:id="overtimePayLabel" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+        <Label text="Deductions:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+        <Label fx:id="deductionsLabel" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+        <Label text="Net Salary:" style="-fx-font-weight: bold;" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+        <Label fx:id="netSalaryLabel" style="-fx-font-weight: bold;" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Generate &amp; Save Payslip" onAction="#onGeneratePayslip" style="-fx-font-size: 14px;"/>
+        <Button text="Print Payslip" onAction="#handlePrint" style="-fx-font-size: 14px;"/>
+    </HBox>
+</VBox>

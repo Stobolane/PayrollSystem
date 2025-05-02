@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="20" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.payrollmanagement.SalaryCalculationController"
+      style="-fx-padding: 30; -fx-background-color: #ffffff;">
+
+    <Text text="Salary Calculation" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10">
+        <Label text="Select Employee:" />
+        <ComboBox fx:id="employeeComboBox" onAction="#handleSelection" prefWidth="200"/>
+    </HBox>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Basic Salary:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="basicSalaryLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Working Hours:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="workingHoursLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Overtime Pay:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="overtimeField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Deductions (Tax + Insurance):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="deductionsField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Net Salary:" style="-fx-font-weight: bold;" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="netSalaryLabel" style="-fx-font-weight: bold;" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Button text="Calculate" onAction="#handleCalculateSalary" />
+</VBox>

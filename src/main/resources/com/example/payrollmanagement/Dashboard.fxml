@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.payrollmanagement.DashboardController"
+      alignment="TOP_CENTER" style="-fx-padding: 25;">
+
+    <Label text="Welcome to Admin Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="activityTable" prefHeight="200" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="activityColumn" text="Recent Activity" prefWidth="480"/>
+        </columns>
+    </TableView>
+
+</VBox>

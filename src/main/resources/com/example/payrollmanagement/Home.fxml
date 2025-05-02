@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payrollmanagement.HomeController">
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+
+            <Label text="Payroll Management System" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+            <Button text="Employee Login" style="-fx-font-size: 16px; -fx-pref-width: 200px; -fx-pref-height: 40px;"
+                    onAction="#handleLogin"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Need help?" style="-fx-text-fill: #666;"/>
+                <Hyperlink text="Contact Support" style="-fx-font-size: 14px;"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
+            <Label text="© 2023 Payroll Management System" style="-fx-text-fill: #666;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

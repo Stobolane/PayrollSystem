@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.payrollmanagement.LoginController">
+    <top>
+        <HBox alignment="CENTER" prefHeight="70" style="-fx-background-color: #2c3e50;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;" text="MATEBO SMARTPAY"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30; -fx-background-color: #f4f6f7;">
+            <GridPane alignment="CENTER" hgap="15" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                    <ColumnConstraints minWidth="200" prefWidth="250"/>
+                </columnConstraints>
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Username:"/>
+                <TextField fx:id="usernameField" promptText="Enter Username" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #2c3e50;"/>
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Password:" GridPane.rowIndex="1"/>
+                <PasswordField fx:id="passwordField" promptText="Enter Password" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #2c3e50;" GridPane.rowIndex="1"/>
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Role:" GridPane.rowIndex="2"/>
+                <ComboBox fx:id="roleComboBox" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #2c3e50;" GridPane.rowIndex="2"/>
+
+                <Button fx:id="loginButton" text="Login" onAction="#handleLogin" style="-fx-background-color: #2c3e50; -fx-text-fill: white;" GridPane.rowIndex="3"/>
+                <Button fx:id="registerButton" text="Register" onAction="#goToRegister" style="-fx-background-color: #2c3e50; -fx-text-fill: white;" GridPane.rowIndex="4"/>
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>
